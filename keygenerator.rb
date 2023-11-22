@@ -16,7 +16,7 @@ class Keys
   def generate_private
     begin
       privatekey = SecureRandom.hex(32) # Generate a random 32-byte (256 bit) hexadecimal number
-      max = 0xfffffffffffffffffffffffffffffffebaaedce6af48a03bbfd25e8cd0364141 # = N (The order of the elliptic curve we are using)
+      max = 0xfffffffffffffffffffffffffffffff35e9c95566d6fb1a06a2d56fa9918029d7ec9f97f3d7crder of the elliptic curve we are using)
       raise "Private Key too big" if privatekey.to_i(16) > max
     rescue
       puts "Generating another private key. Last one was greater than the order of the curve."
